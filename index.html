@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiverBo Neon Stack 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <p class="badge">LiverBo // Future Arcade 2026</p>
+        <h1>Neon Stack</h1>
+        <p class="subtitle">Een frisse, snelle block-stacker geïnspireerd op klassiekers.</p>
+      </header>
+
+      <section class="game-layout">
+        <aside class="panel left">
+          <div class="card">
+            <h2>Hold</h2>
+            <canvas id="hold" width="120" height="120" aria-label="Hold blok"></canvas>
+          </div>
+          <div class="card controls">
+            <h2>Besturing</h2>
+            <ul>
+              <li><kbd>←</kbd> / <kbd>→</kbd> verplaatsen</li>
+              <li><kbd>↓</kbd> zacht laten vallen</li>
+              <li><kbd>Space</kbd> hard drop</li>
+              <li><kbd>Z</kbd> / <kbd>↑</kbd> roteren</li>
+              <li><kbd>C</kbd> hold</li>
+              <li><kbd>P</kbd> pauze</li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="board-wrapper">
+          <canvas id="board" width="320" height="640" aria-label="Game bord"></canvas>
+          <div id="overlay" class="overlay hidden">
+            <h2 id="overlay-title">Pauze</h2>
+            <p id="overlay-text">Druk op P om verder te gaan.</p>
+          </div>
+        </div>
+
+        <aside class="panel right">
+          <div class="card">
+            <h2>Volgende</h2>
+            <canvas id="next" width="120" height="360" aria-label="Volgende blokken"></canvas>
+          </div>
+          <div class="card stats">
+            <h2>Stats</h2>
+            <p>Score <strong id="score">0</strong></p>
+            <p>Level <strong id="level">1</strong></p>
+            <p>Lines <strong id="lines">0</strong></p>
+            <button id="restart" type="button">Nieuwe ronde</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
